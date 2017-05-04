@@ -7,4 +7,4 @@ services:
 install:
 
 script:
-- python3 test.py
+- python3 test1.py
