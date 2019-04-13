@@ -1,0 +1,15 @@
+
+version: '3'
+services:
+    isay-daemon:
+        container_name: test-daemon
+        build:
+            context: ./
+            dockerfile: ./docker/test-daemon/Dockerfile
+        image: nodejs:test-daemon
+        volumes:
+            - ../.:/docker-expressdir
+        ports:
+            - 8080:3000
+        working_dir: /docker-expressdir
+        command: npm start
