@@ -1,11 +1,11 @@
 
 version: '3'
 services:
-    isay-daemon:
+    test-daemon:
         container_name: test-daemon
         build:
             context: ./
-            dockerfile: ./docker/test-daemon/Dockerfile
+            dockerfile: ./test-daemon/Dockerfile
         image: nodejs:test-daemon
         volumes:
             - ../.:/docker-expressdir
